@@ -13,6 +13,28 @@
 
 ![jtd](https://user-images.githubusercontent.com/896475/47384541-89053c80-d6d5-11e8-98dc-dba16e192de9.gif)
 
+
+
+## Getting started
+
+### Quick start: Use as a GitHub Pages remote theme
+
+To build your site with a public, GitHub-hosted theme, add the following to your Repo site’s _config.yml file:  
+
+```yaml
+remote_theme: owner/name
+```  
+
+Replacing owner and name with the repository’s owner and name.  
+
+1. Add UI-Theme-Doc to your Jekyll site's `_config.yml` as a remote theme :  
+
+```yaml
+remote_theme: gigamaster/ui-theme-doc
+```
+<small>You must have GitHub Pages enabled on your repo, one or more Markdown files, and a `_config.yml` file.</small>
+
+
 ## Installation
 
 Add this line to your Jekyll site's Gemfile:
