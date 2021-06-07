@@ -64,7 +64,7 @@ heading_anchors: true
 
 # Aux links for the upper right navigation
 aux_links:
-  "Just the Docs on GitHub":
+  "UI Theme Doc on GitHub":
     - "//github.com/gigamaster/ui-theme-doc"
 
 # Makes Aux links open in a new tab. Default is false
@@ -216,7 +216,7 @@ collections:
     permalink: "/:collection/:path:output_ext"
     output: true
 
-just_the_docs:
+ui_theme_doc:
   collections:
     tests:
       name: Tests

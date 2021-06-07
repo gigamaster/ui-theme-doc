@@ -162,7 +162,7 @@ collections:
     permalink: "/:collection/:path/"
     output: true
 
-just_the_docs:
+ui_theme_doc:
   # Define which collections are used in ui-theme-doc
   collections:
     # Reference the "docs" collection
