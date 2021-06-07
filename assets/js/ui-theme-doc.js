@@ -1,9 +1,8 @@
 ---
 ---
 (function (jtd, undefined) {
-
-// Event handling 2.3.0
-
+//  2.3.0
+// Event handling
 jtd.addEvent = function(el, type, handler) {
   if (el.attachEvent) el.attachEvent('on'+type, handler); else el.addEventListener(type, handler);
 }

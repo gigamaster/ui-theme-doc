@@ -6,10 +6,10 @@ description: "UI-Theme Documentation is a responsive Jekyll theme with built-in 
 permalink: /
 ---
 
-# Focus on writing good documentation
+# User Interface - Theme documentation
 {: .fs-9 }
 
-UI-Theme-Doc (UTD) is a fork of "Just the Docs", a responsive Jekyll theme that is easily customizable and hosted on GitHub Pages. The purpose of UTD is to present the design approach and components for the graphical interface of Cube Core and Legacy system Web Application Platform. 
+UI-Theme-Doc (UTD) is a fork of "Just the Docs", a responsive Jekyll theme that is easily customizable and hosted on GitHub Pages. The purpose of UTD is to present the design approach and components for the graphical interface of Cube Core and Legacy system Web Application Platform. The documentation will be updated later to incorporate possible changes during development.
 {: .fs-6 .fw-300 }
 
 [Get started now](#getting-started){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } [View it on GitHub](https://github.com/gigamaster/ui-theme-doc){: .btn .fs-5 .mb-4 .mb-md-0 }
@@ -18,17 +18,26 @@ UI-Theme-Doc (UTD) is a fork of "Just the Docs", a responsive Jekyll theme that 
 
 ## Getting started
 
-### Dependencies
-
-UI-Theme-Doc is a fork of Just the Docs that is built for [Jekyll](https://jekyllrb.com), a static site generator. View the [quick start guide](https://jekyllrb.com/docs/) for more information. Also, it requires no special plugins and can run on GitHub Pages' standard Jekyll compiler. The [Jekyll SEO Tag plugin](https://github.com/jekyll/jekyll-seo-tag) is included by default (no need to run any special installation) to inject SEO and open graph metadata on docs pages. For information on how to configure SEO and open graph metadata visit the [Jekyll SEO Tag usage guide](https://jekyll.github.io/jekyll-seo-tag/usage/).
-
 ### Quick start: Use as a GitHub Pages remote theme
 
-1. Add UTD to your Jekyll site's `_config.yml` as a [remote theme](https://blog.github.com/2017-11-29-use-any-theme-with-github-pages/)
+To build your site with a public, GitHub-hosted theme, add the following to your Repo site’s _config.yml file:  
+
+```yaml
+remote_theme: owner/name
+```  
+
+Replacing owner and name with the repository’s owner and name.  
+
+1. Add UI-Theme-Doc to your Jekyll site's `_config.yml` as a remote theme :  
+
 ```yaml
 remote_theme: gigamaster/ui-theme-doc
 ```
 <small>You must have GitHub Pages enabled on your repo, one or more Markdown files, and a `_config.yml` file. [See an example repository](https://github.com/xoopscube/themes)</small>
+
+### Dependencies
+
+UI-Theme-Doc is a fork of Just the Docs that is built for [Jekyll](https://jekyllrb.com), a static site generator. View the [quick start guide](https://jekyllrb.com/docs/) for more information. Also, it requires no special plugins and can run on GitHub Pages' standard Jekyll compiler. The [Jekyll SEO Tag plugin](https://github.com/jekyll/jekyll-seo-tag) is included by default (no need to run any special installation) to inject SEO and open graph metadata on docs pages. For information on how to configure SEO and open graph metadata visit the [Jekyll SEO Tag usage guide](https://jekyll.github.io/jekyll-seo-tag/usage/).
 
 ### Fork and Local installation: Use the gem-based theme
 

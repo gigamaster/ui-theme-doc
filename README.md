@@ -1,6 +1,8 @@
-<p align="right">
-    <a href="https://badge.fury.io/rb/ui-theme-doc"><img src="https://badge.fury.io/rb/ui-theme-doc.svg" alt="Gem version"></a> <a href="https://github.com/gigamaster/ui-theme-doc/actions?query=workflow%3A%22Master+branch+CI%22"><img src="https://github.com/gigamaster/ui-theme-doc/workflows/Master%20branch%20CI/badge.svg" alt="Build status"></a>
-</p>
+[![Creative Commons cc-sa](http://ForTheBadge.com/images/badges/cc-sa.svg)](https://creativecommons.org/licenses/by-sa/4.0) 
+[![UTD powered-by-electricity](http://ForTheBadge.com/images/badges/powered-by-electricity.svg)](https://github.com/gigamaster/ui-theme-doc)
+[![UTD](https://forthebadge.com/images/badges/built-with-love.svg)](https://github.com/gigamaster/ui-theme-doc)
+
+
 <br><br>
 <p align="center">
     <h1 align="center">UI Theme Doc (Just the Docs)</h1>
