@@ -1,5 +1,6 @@
 *.gem
 .bundle
+*.back
 .ruby-version
 .jekyll-cache
 .sass-cache
