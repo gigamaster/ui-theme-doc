@@ -82,7 +82,7 @@ Just the Docs is &copy; 2017-{{ "now" | date: "%Y" }} by [Patrick Marsceill](htt
 
 ### License
 
-Just the Docs is distributed by an [MIT license](https://github.com/gigamaster/ui-theme-doc/tree/master/LICENSE.txt).
+Distributed under the terms of the [MIT license](https://opensource.org/licenses/MIT).
 
 ### Contributing
 
