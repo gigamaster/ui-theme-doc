@@ -1,17 +1,17 @@
 {
   "name": "ui-theme-doc",
-  "version": "2.3.0",
-  "description": "UI Theme documentation",
-  "repository": "gigamaster/ui-theme-doc",
+  "version": "0.3.3",
+  "description": "A modern Jekyll theme for documentation",
+  "repository": "pmarsceill/ui-theme-doc",
   "license": "MIT",
-  "bugs": "https://github.com/gigamaster/ui-theme-doc/issues",
+  "bugs": "https://github.com/pmarsceill/ui-theme-doc/issues",
   "devDependencies": {
-    "stylelint": "^13.11.0",
+    "stylelint": "^13.7.2",
     "@primer/css": "^15.2.0",
     "prettier": "^2.1.2",
     "stylelint-config-prettier": "^8.0.2",
-    "stylelint-config-primer": "^11.0.0",
-    "stylelint-prettier": "^1.2.",
+    "stylelint-config-primer": "^9.2.1",
+    "stylelint-prettier": "^1.1.2",
     "stylelint-selector-no-utility": "^4.0.0"
   },
   "scripts": {

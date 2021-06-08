@@ -6,7 +6,6 @@
   {% assign color_scheme = "light" %}
 {% endif %}
 
-
 {% if site.toggle_color_scheme == "nil" or site.toggle_color_scheme == nil %}
 
   {% assign toggle_color_scheme = nil %}

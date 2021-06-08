@@ -1,39 +1,15 @@
-[![Creative Commons cc-sa](http://ForTheBadge.com/images/badges/cc-sa.svg)](https://creativecommons.org/licenses/by-sa/4.0) 
-[![UTD powered-by-electricity](http://ForTheBadge.com/images/badges/powered-by-electricity.svg)](https://github.com/gigamaster/ui-theme-doc)
-[![UTD](https://forthebadge.com/images/badges/built-with-love.svg)](https://github.com/gigamaster/ui-theme-doc)
-
-
+<p align="right">
+    <a href="https://badge.fury.io/rb/ui-theme-doc"><img src="https://badge.fury.io/rb/ui-theme-doc.svg" alt="Gem version"></a> <a href="https://github.com/pmarsceill/ui-theme-doc/actions?query=workflow%3A%22Master+branch+CI%22"><img src="https://github.com/pmarsceill/ui-theme-doc/workflows/Master%20branch%20CI/badge.svg" alt="Build status"></a>
+</p>
 <br><br>
 <p align="center">
-    <h1 align="center">UI Theme Doc (Just the Docs)</h1>
+    <h1 align="center">Just the Docs</h1>
     <p align="center">A modern, highly customizable, and responsive Jekyll theme for documentation with built-in search.<br>Easily hosted on GitHub Pages with few dependencies.</p>
-    <p align="center"><strong><a href="https://gigamaster.github.io/ui-theme-doc/">See it in action!</a></strong></p>
+    <p align="center"><strong><a href="https://pmarsceill.github.io/ui-theme-doc/">See it in action!</a></strong></p>
     <br><br><br>
 </p>
 
 ![jtd](https://user-images.githubusercontent.com/896475/47384541-89053c80-d6d5-11e8-98dc-dba16e192de9.gif)
-
-
-
-## Getting started
-
-### Quick start: Use as a GitHub Pages remote theme
-
-To build your site with a public, GitHub-hosted theme, add the following to your Repo site’s _config.yml file:  
-
-```yaml
-remote_theme: owner/name
-```  
-
-Replacing owner and name with the repository’s owner and name.  
-
-1. Add UI-Theme-Doc to your Jekyll site's `_config.yml` as a remote theme :  
-
-```yaml
-remote_theme: gigamaster/ui-theme-doc
-```
-<small>You must have GitHub Pages enabled on your repo, one or more Markdown files, and a `_config.yml` file.</small>
-
 
 ## Installation
 
@@ -63,15 +39,15 @@ Alternatively, you can run it inside Docker while developing your site
 
 ## Usage
 
-[View the documentation](https://gigamaster.github.io/ui-theme-doc/) for usage information.
+[View the documentation](https://pmarsceill.github.io/ui-theme-doc/) for usage information.
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/gigamaster/ui-theme-doc. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/pmarsceill/ui-theme-doc. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ### Submitting code changes:
 
-- Open a [Pull Request](https://github.com/gigamaster/ui-theme-doc/pulls)
+- Open a [Pull Request](https://github.com/pmarsceill/ui-theme-doc/pulls)
 - Ensure all CI tests pass
 - Await code review
 - Bump the version number in `ui-theme-doc.gemspec` and `package.json` according to [semantic versioning](https://semver.org/).

@@ -47,4 +47,3 @@ Coming soon
 Deprecated
 {: .label .label-red }
 ```
-

@@ -18,10 +18,7 @@ nav_order: 6
 ## Color schemes
 {: .d-inline-block }
 
-New
-{: .label .label-green }
-
-UI Theme Doc (Just the Docs) supports two color schemes: light (default), and dark.
+Just the Docs supports two color schemes: light (default), and dark.
 
 To enable a color scheme, set the `color_scheme` parameter in your site's `_config.yml` file:
 
@@ -58,7 +55,7 @@ You can add custom schemes.
 If you want to add a scheme named `foo` (can be any name) just add a file `_sass/color_schemes/foo.scss` (replace `foo` by your scheme name) 
 where you override theme variables to change colors, fonts, spacing, etc.
 
-Available variables are listed in the [_variables.scss](https://github.com/gigamaster/ui-theme-doc/tree/master/_sass/support/_variables.scss) file.
+Available variables are listed in the [_variables.scss](https://github.com/pmarsceill/ui-theme-doc/tree/master/_sass/support/_variables.scss) file.
 
 For example, to change the link color from the purple default to blue, include the following inside your scheme file:
 
@@ -115,4 +112,3 @@ For example, if you'd like to add your own styles for printing a page, you could
   .main-content { max-width: auto; margin: 1em;}
 }
 ```
-

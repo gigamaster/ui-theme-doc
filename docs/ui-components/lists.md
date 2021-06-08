@@ -97,4 +97,3 @@ Definition lists require HTML syntax and aren't supported with the GitHub Flavor
   <dd>Green</dd>
 </dl>
 ```
-

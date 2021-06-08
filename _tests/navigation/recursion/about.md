@@ -14,7 +14,7 @@ The navigation hierarchy provided by Just the Docs is currently limited to three
 
 The current implementation requires parent pages to have `has_children: true`, and `grand_parent` fields to be consistent with the `parent` fields of their parent pages. Level-2 pages may have the same title when they have different `parent` fields. And level-3 pages may have the same title when they have different `parent` fields or different `grand_parent` fields.
 
-In [PR #192](https://github.com/pmarsceill/just-the-docs/pull/192), [Eugene Kuzmenko](https://github.com/thealjey) proposed allowing the navigation to have unbounded depth, and provided a very elegant implementation (using recursive inclusion of Liquid files) with the following features:
+In [PR #192](https://github.com/pmarsceill/ui-theme-doc/pull/192), [Eugene Kuzmenko](https://github.com/thealjey) proposed allowing the navigation to have unbounded depth, and provided a very elegant implementation (using recursive inclusion of Liquid files) with the following features:
 
 * makes navigation recursive, which means that it can go down to an arbitrary depth
 * makes the notion of grand parents/children obsolete. If a page is a child of a page, that itself is a child of another page, that automatically makes this page a grandchild.
@@ -50,11 +50,11 @@ It implements the following features:
 
 ## Implementation overview
 
-[regression tests]: https://github.com/pdmosses/just-the-docs/tree/rec-nav-cache/_tests
+[regression tests]: https://github.com/pdmosses/ui-theme-doc/tree/rec-nav-cache/_tests
 
 See the comments in the files referenced below for further explanation of the implementation. The [regression tests] include examples exploiting all the above features for disambiguating parents in recursive navigation hierarchies.
 
-[default layout]: https://github.com/pdmosses/just-the-docs/blob/rec-nav-cache/_layouts/default.html
+[default layout]: https://github.com/pdmosses/ui-theme-doc/blob/rec-nav-cache/_layouts/default.html
 
 The [default layout] calls:
 
@@ -62,17 +62,17 @@ The [default layout] calls:
 - [`crumbs`] to output any breadcrumb navigation at the top of the page, and
 - [`toc`] to output the list of any child page navigation at the bottom of the page.
 
-[`_includes/nav/`]: https://github.com/pdmosses/just-the-docs/tree/rec-nav-cache/_includes/nav
+[`_includes/nav/`]: https://github.com/pdmosses/ui-theme-doc/tree/rec-nav-cache/_includes/nav
 
 All the files that implement the navigation are in the [`_includes/nav/`] folder. All variables assigned by the code are prefixed by `nav_` (which is elided when referring to variables in the descriptions below).
 
-[`main`]: https://github.com/pdmosses/just-the-docs/blob/rec-nav-cache/_includes/nav/main.html
+[`main`]: https://github.com/pdmosses/ui-theme-doc/blob/rec-nav-cache/_includes/nav/main.html
 
 [`main`]
 - called from the [default layout]
 - outputs the main navigation for ordinary pages and for each just-the docs collection
 
-[`collection`]: https://github.com/pdmosses/just-the-docs/blob/rec-nav-cache/_includes/nav/collection.html
+[`collection`]: https://github.com/pdmosses/ui-theme-doc/blob/rec-nav-cache/_includes/nav/collection.html
 
 [`collection`]
 - called from  [`main`]
@@ -80,7 +80,7 @@ All the files that implement the navigation are in the [`_includes/nav/`] folder
 - if the current page is in the `pages` parameter, calls [`page`] to locate it
 - calls [`links`] to output the navigation links
 
-[`page`]: https://github.com/pdmosses/just-the-docs/blob/rec-nav-cache/_includes/nav/page.html
+[`page`]: https://github.com/pdmosses/ui-theme-doc/blob/rec-nav-cache/_includes/nav/page.html
 
 [`page`]
 - called from [`collection`]
@@ -92,7 +92,7 @@ All the files that implement the navigation are in the [`_includes/nav/`] folder
   - sets `page_children` to the sorted array of direct children, for use by [`toc`]
 - uses [`children`] to determine the children of each node
 
-[`links`]: https://github.com/pdmosses/just-the-docs/blob/rec-nav-cache/_includes/nav/links.html
+[`links`]: https://github.com/pdmosses/ui-theme-doc/blob/rec-nav-cache/_includes/nav/links.html
 
 [`links`]
 - called from [`collection`] and [`node`]
@@ -101,13 +101,13 @@ All the files that implement the navigation are in the [`_includes/nav/`] folder
 - uses `page_path` to test whether each node is active
 - uses [`children`] to determine the children of each node
 
-[`node`]: https://github.com/pdmosses/just-the-docs/blob/rec-nav-cache/_includes/nav/node.html
+[`node`]: https://github.com/pdmosses/ui-theme-doc/blob/rec-nav-cache/_includes/nav/node.html
 
 [`node`]
 - called from [`links`]
 - outputs the link for a node, then for its children using [`links`] or [`inactive_links`]
 
-[`inactive_links`]: https://github.com/pdmosses/just-the-docs/blob/rec-nav-cache/_includes/nav/inactive_links.html
+[`inactive_links`]: https://github.com/pdmosses/ui-theme-doc/blob/rec-nav-cache/_includes/nav/inactive_links.html
 
 [`inactive_links`]
 - called from [`node`] and [`inactive_node`]
@@ -115,38 +115,38 @@ All the files that implement the navigation are in the [`_includes/nav/`] folder
 - traverses the nav hierarchy top-down, outputting an HTML link for each non-excluded node using [`inactive_node`]
 - uses [`children`] to determine the children of each node
 
-[`inactive_node`]: https://github.com/pdmosses/just-the-docs/blob/rec-nav-cache/_includes/nav/inactive_node.html
+[`inactive_node`]: https://github.com/pdmosses/ui-theme-doc/blob/rec-nav-cache/_includes/nav/inactive_node.html
 
 [`inactive_node`]
 - called from [`inactive_links`]
 - outputs the link for a node, then for its children using [`inactive_links`]
 
-[`crumbs`]: https://github.com/pdmosses/just-the-docs/blob/rec-nav-cache/_includes/nav/crumbs.html
+[`crumbs`]: https://github.com/pdmosses/ui-theme-doc/blob/rec-nav-cache/_includes/nav/crumbs.html
 
 [`crumbs`]
 - called from the [default layout] with parameter `page_ancestors`
 - outputs HTML for the given array of pages
 
-[`toc`]: https://github.com/pdmosses/just-the-docs/blob/rec-nav-cache/_includes/nav/toc.html
+[`toc`]: https://github.com/pdmosses/ui-theme-doc/blob/rec-nav-cache/_includes/nav/toc.html
 
 [`toc`]
 - called from the [default layout] with parameter `page_children`
 - outputs HTML for the given array of pages
 
-[`children`]: https://github.com/pdmosses/just-the-docs/blob/rec-nav-cache/_includes/nav/children.html
+[`children`]: https://github.com/pdmosses/ui-theme-doc/blob/rec-nav-cache/_includes/nav/children.html
 
 [`children`]
 - called from [`page`] and [`links`] with an array of potential child pages
 - sets `children` to those pages with matching `grand_parent`, `section`, and `ancestor` fields
 
-[`sorted`]: https://github.com/pdmosses/just-the-docs/blob/rec-nav-cache/_includes/nav/sorted.html
+[`sorted`]: https://github.com/pdmosses/ui-theme-doc/blob/rec-nav-cache/_includes/nav/sorted.html
 
 [`sorted`]
 - called from [`collection`] with an unsorted array of pages
 - sets `sorted` to the result of sorting the array using the `nav_order` fields
 
-[`debug`]: https://github.com/pdmosses/just-the-docs/blob/rec-nav-cache/_includes/nav/debug.html
-[plugin]: https://github.com/pdmosses/just-the-docs/blob/rec-nav-cache/_plugins/debug.rb
+[`debug`]: https://github.com/pdmosses/ui-theme-doc/blob/rec-nav-cache/_includes/nav/debug.html
+[plugin]: https://github.com/pdmosses/ui-theme-doc/blob/rec-nav-cache/_plugins/debug.rb
 
 [`debug`]
 - called from the [default layout]

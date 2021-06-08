@@ -15,7 +15,7 @@ parent: Utilities
 
 ---
 
-All the colors used in UI Theme Doc (Just the Docs) have been systematized into a series of variables that have been extended to both font color and background color utility classes.
+All the colors used in Just the Docs have been systematized into a series of variables that have been extended to both font color and background color utility classes.
 
 ## Light Greys
 
@@ -80,4 +80,3 @@ All the colors used in UI Theme Doc (Just the Docs) have been systematized into 
 | <span class="d-inline-block p-2 mr-1 v-align-middle bg-red-100"></span> `red-100` | `.text-red-100` | `.bg-red-100` |
 | <span class="d-inline-block p-2 mr-1 v-align-middle bg-red-200"></span> `red-200` | `.text-red-200` | `.bg-red-200` |
 | <span class="d-inline-block p-2 mr-1 v-align-middle bg-red-300"></span> `red-300` | `.text-red-300` | `.bg-red-300` |
-

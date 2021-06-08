@@ -44,4 +44,3 @@ This Code of Conduct is adapted from the [Contributor Covenant][homepage], versi
 
 [homepage]: http://contributor-covenant.org
 [version]: http://contributor-covenant.org/version/1/4/
-[UI-Theme-Doc]: https://github.com/gigamaster/ui-theme-doc

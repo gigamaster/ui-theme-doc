@@ -22,9 +22,9 @@
         page = include.page -%}
 {%- endif -%}
 
-{%- if site.ui_theme_doc.collections -%}
-  {%- assign collections_size = site.ui_theme_doc.collections | size -%}
-  {%- for collection_entry in site.ui_theme_doc.collections -%}
+{%- if site.just_the_docs.collections -%}
+  {%- assign collections_size = site.just_the_docs.collections | size -%}
+  {%- for collection_entry in site.just_the_docs.collections -%}
 
     {%- assign collection_key = collection_entry[0] -%}
     {%- assign collection_value = collection_entry[1] -%}
