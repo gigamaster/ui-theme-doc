@@ -2,14 +2,14 @@
 layout: default
 title: Home
 nav_order: 1
-description: "UI-Theme Documentation is a responsive Jekyll theme with built-in search that is easily customizable and hosted on GitHub Pages."
+description: "UI-Theme Documentation is a responsive Jekyll theme with built-in search and hosted on GitHub Pages."
 permalink: /
 ---
 
 # User Interface - Theme documentation
 {: .fs-9 }
 
-UI-Theme-Doc (UTD) is a fork of "Just the Docs", a responsive Jekyll theme that is easily customizable and hosted on GitHub Pages. The purpose of UTD is to present the design approach and components for the graphical interface of Cube Core and Legacy system Web Application Platform. The documentation will be updated later to incorporate possible changes during development.
+UI-Theme-Doc (UTD) is a fork of "Just the Docs", a responsive Jekyll theme that is easily customizable and hosted on GitHub Pages. The purpose of UTD is to present the design approach and components for the graphical interface of the Web Application Platform. The documentation will be updated later to incorporate possible changes during development.
 {: .fs-6 .fw-300 }
 
 [Get started now](#getting-started){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 } [View it on GitHub](https://github.com/gigamaster/ui-theme-doc){: .btn .fs-5 .mb-4 .mb-md-0 }
@@ -77,7 +77,7 @@ If you're hosting your site on GitHub Pages, [set up GitHub Pages and Jekyll loc
 
 ## About the project
 
-UI-Theme-Doc is maintained by Gigamaster.  
+UI-Theme-Doc is maintained by Gigamaster.   
 Just the Docs is &copy; 2017-{{ "now" | date: "%Y" }} by [Patrick Marsceill](http://patrickmarsceill.com).
 
 ### License
