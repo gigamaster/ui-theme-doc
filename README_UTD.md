@@ -3,14 +3,14 @@
 [![Codemo uses-css](http://ForTheBadge.com/images/badges/uses-css.svg)](https://github.com/gigamaster/codemo)
 [![Codemo uses-js](http://ForTheBadge.com/images/badges/uses-js.svg)](https://github.com/gigamaster/codemo)
 
-### /////////////////////////// — CODEMO
+### ///// — CODEMO
 
 Code and Design Samples - XCL User Interface Components
 
 XCL Web Application Platform UI-Components for humans to create responsive web sites. 
 You can use your favorite CSS, Javascript and PHP framework with an existing project or start fresh with a new project, using a Quick-start theme from below.   
   
-### ///////////////////////////  — Table of Contents  
+### `Table of Contents`  
 
 - **Codesign [ sandbox ]**  
 :game_die: Installation 
@@ -20,12 +20,12 @@ You can use your favorite CSS, Javascript and PHP framework with an existing pro
 :package: Credits  
 :iphone: License  
 
-### ///////////////////////////  — Installation  
+### `Installation`  
 
 quickstarts are boilerplates front-end themes and templates (components) that give you everything you need to make your XCL-based site ready for any browser. 
 The following quickstarts are paired with guides and a button-link to deploy from the dashboard. The installation is based on the examples found in the Github repository, to help you customize your web application platform, CMS or personal project as fast as possible.
 
-### /////////////////////////// — Usage
+### `Usage`
 
 
 **User Interface elements include but are not limited to**
@@ -50,7 +50,7 @@ The following quickstarts are paired with guides and a button-link to deploy fro
 
 :file_folder: icons
 
-### Themes and Templates
+### `Themes and Templates`
 
 XCube Base installation is required for XCL components!
 
@@ -81,13 +81,7 @@ XCube Base installation is required for XCL components!
 - Progress Semicircle
 - Chart Bar
 
-### /////////////////////////// — Contributing
-
-### /////////////////////////// — Credits
-
-This section is for credits in order to highlight and link to the authors of open source frameworks.
-
-### /////////////////////////// — License
+### `License`
 
 UI-Components and ressources are open source and most projects use the MIT license, the Apache license, and the GPL or their variants.
 
