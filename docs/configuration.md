@@ -20,14 +20,14 @@ Just the Docs has some specific configuration parameters that can be defined in 
 ---
 
 
-View this site's [_config.yml](https://github.com/pmarsceill/just-the-docs/tree/master/_config.yml) file as an example.
+View this site's [_config.yml](https://github.com/pmarsceill/ui-theme-doc/tree/master/_config.yml) file as an example.
 
 
 ## Site logo
 
 ```yaml
 # Set a path/url to a logo that will be displayed instead of the title
-logo: "/assets/images/just-the-docs.png"
+logo: "/assets/images/ui-theme-doc.png"
 ```
 
 ## Search
@@ -68,7 +68,7 @@ search:
 # Aux links for the upper right navigation
 aux_links:
   "Just the Docs on GitHub":
-    - "//github.com/pmarsceill/just-the-docs"
+    - "//github.com/pmarsceill/ui-theme-doc"
 
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: false
@@ -84,6 +84,18 @@ aux_links_new_tab: false
 heading_anchors: true
 ```
 
+## Parent and sibling links
+
+```yaml
+# Include links to parent and sibling pages when showing the automatic TOC
+nav_next_prev: true
+#
+# The default arrows can be changed to other characters or words
+# nav_prev_text: "&larr;"
+# nav_up_text:   "&uarr;"
+# nav_next_text: "&rarr;"
+```
+
 ## Footer content
 
 ```yaml
@@ -91,7 +103,7 @@ heading_anchors: true
 # appears at the bottom of every page's main content
 # Note: The footer_content option is deprecated and will be removed in a future major release. Please use `_includes/footer_custom.html` for more robust
 markup / liquid-based content.
-footer_content: "Copyright &copy; 2017-2020 Patrick Marsceill. Distributed by an <a href=\"https://github.com/pmarsceill/just-the-docs/tree/master/LICENSE.txt\">MIT license.</a>"
+footer_content: "Copyright &copy; 2017-2020 Patrick Marsceill. Distributed by an <a href=\"https://github.com/pmarsceill/ui-theme-doc/tree/master/LICENSE.txt\">MIT license.</a>"
 
 # Footer last edited timestamp
 last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
@@ -100,7 +112,7 @@ last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https:/
 # Footer "Edit this page on GitHub" link text
 gh_edit_link: true # show or hide edit this page link
 gh_edit_link_text: "Edit this page on GitHub."
-gh_edit_repository: "https://github.com/pmarsceill/just-the-docs" # the github URL for your repo
+gh_edit_repository: "https://github.com/pmarsceill/ui-theme-doc" # the github URL for your repo
 gh_edit_branch: "master" # the branch that your docs is served from
 # gh_edit_source: docs # the source that your files originate from
 gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
@@ -118,9 +130,10 @@ _note: `footer_content` is deprecated, but still supported. For a better experie
 ## Color scheme
 
 ```yaml
-# Color scheme supports "light" (default) and "dark"
+# Color scheme supports "dark", "light", and your custom schemes:
 color_scheme: dark
 ```
+{% unless site.toggle_color_scheme and site.toggle_color_scheme != "nil"  %}
 <button class="btn js-toggle-dark-mode">Preview dark color scheme</button>
 
 <script>
@@ -136,8 +149,79 @@ jtd.addEvent(toggleDarkMode, 'click', function(){
   }
 });
 </script>
-
+{% endunless %}
 See [Customization]({{ site.baseurl }}{% link docs/customization.md %}) for more information.
+
+## Toggle between two schemes
+
+New
+{: .label .label-green }
+
+```yaml
+# color_scheme: nil                # default: light
+# To add a button to switch all pages to a different scheme:
+toggle_color_scheme: dark          # default: nil (no toggle button)
+# To display the toggle button only on one page:
+toggle_page_url: "/"               # default: nil (display on all pages)
+# To toggle automatically when the system mode preference changes:
+toggle_auto_mode: true             # default: nil (manual toggle)
+# To set the button text for toggling and reverting:
+# toggle_text_1: "&rarr; &#x26ab;" # default: "&rarr; Dark Mode"
+# toggle_text_2: "&rarr; &#x26ab;" # default: "&rarr; Light Mode"
+```
+
+## Callouts
+
+To use this feature, you need to configure a `color` and (optionally) `title` for each kind of callout you want to use, e.g.:
+
+```yaml
+callouts:
+  warning:
+    title: Warning
+    color: red
+```
+
+This uses the color `$red-000` for the background of the callout, and `$red-300` for the title and box decoration.[^dark] You can then style a paragraph as a `warning` callout like this:
+
+```markdown
+{: .warning }
+A paragraph...
+```
+
+[^dark]:
+    If you use the `dark` color scheme, this callout uses `$red-300` for the background, and `$red-000` for the title. 
+
+The colors `grey-lt`, `grey-dk`, `purple`, `blue`, `green`, `yellow`, and `red` are predefined; to use a custom color, you need to define its `000` and `300` levels in your SCSS files. For example, to use `pink`, add the following to your `_sass/custom/custom.scss` file:
+
+```scss
+$pink-000: #f77ef1;
+$pink-100: #f967f1;
+$pink-200: #e94ee1;
+$pink-300: #dd2cd4;
+```
+
+You can override the default `opacity` of the background for a particular callout, e.g.:
+
+```yaml
+callouts:
+  custom:
+    color: pink
+    opacity: 0.3
+```
+
+You can change the default opacity (0.2) for all callouts, e.g.:
+
+```yaml
+callouts_opacity: 0.3
+```
+
+You can also adjust the overall level of callouts.
+The value of `callouts_level` is either `quiet` or `loud`;
+`loud` increases the saturation and lightness of the backgrounds.
+The default level is `quiet` when using the `light` or custom color schemes,
+and `loud` when using the `dark color scheme.`
+
+See [Callouts]({{ site.baseurl }}{% link docs/ui-components/callouts.md %}) for more information.
 
 ## Google Analytics
 
@@ -151,37 +235,41 @@ ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (t
 ## Document collections
 
 By default, the navigation and search include normal [pages](https://jekyllrb.com/docs/pages/).
-Instead, you can also use [Jekyll collections](https://jekyllrb.com/docs/collections/) which group documents semantically together.
+You can also use [Jekyll collections](https://jekyllrb.com/docs/collections/) which group documents semantically together.
 
-For example, put all your documentation files in the `_docs` folder and create the `docs` collection:
+For example, put all your test files in the `_tests` folder and create the `tests` collection:
 ```yaml
 # Define Jekyll collections
 collections:
-  # Define a collection named "docs", its documents reside in the "_docs" directory
-  docs:
+  # Define a collection named "tests", its documents reside in the "_tests" directory
+  tests:
     permalink: "/:collection/:path/"
     output: true
 
 just_the_docs:
-  # Define which collections are used in just-the-docs
+  # Define which collections are used in ui-theme-doc
   collections:
-    # Reference the "docs" collection
-    docs:
+    # Reference the "tests" collection
+    tests:
       # Give the collection a name
-      name: Documentation
+      name: Tests
       # Exclude the collection from the navigation
       # Supports true or false (default)
-      nav_exclude: false
+      # nav_exclude: true
+      # Fold the collection in the navigation
+      # Supports true or false (default)
+      # nav_fold: true
       # Exclude the collection from the search
       # Supports true or false (default)
-      search_exclude: false
+      # search_exclude: true
 ```
+The navigation for all your normal pages (if any) is displayed before those in collections.
 
 You can reference multiple collections.
 This creates categories in the navigation with the configured names.
 ```yaml
 collections:
-  docs:
+  tests:
     permalink: "/:collection/:path/"
     output: true
   tutorials:
@@ -190,9 +278,26 @@ collections:
 
 just_the_docs:
   collections:
-    docs:
-      name: Documentation
+    tests:
+      name: Tests
     tutorials:
       name: Tutorials
 ```
+When *all* your pages are in a single collection, its name is not displayed.
 
+The navigation for each collection is a separate name space for page titles: a page in one collection cannot be a child of a page in a different collection, or of a normal page.
+
+By default, the navigation panel always shows links to all the top-level pages in all collections.
+You can configure whether individual collections appear folded, e.g.:
+```yaml
+just_the_docs:
+  collections:
+    tests:
+      name: Tests
+      nav_fold: true
+    tutorials:
+      name: Tutorials
+      nav_fold: false
+```
+Clicking the expander mark next to the name of a folded collection reveals the links to its top-level pages.
+Visiting any page in a folded collection reveals those links, and hides the links for all other folded collections.
