@@ -21,7 +21,7 @@ baseurl: "/ui-theme-doc" # the subpath of your site, e.g. /blog
 #####################
 # TO BE REMOVED:
 title: Just the Docs FORK pdmosses/ui-theme-doc @combination-rec-nav 
-url: "https://pdmosses.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://gigamaster.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 # This branch is to be temporarily published at https://pdmosses.github.io/ui-theme-doc/
 #####################
 
@@ -64,7 +64,7 @@ heading_anchors: true
 # Aux links for the upper right navigation
 aux_links:
   "Just the Docs FORK on GitHub":
-    - "//github.com/pdmosses/ui-theme-doc/tree/combination-rec-nav"
+    - "//github.com/gigamaster/ui-theme-doc"
 
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: false
@@ -176,8 +176,8 @@ toggle_page_url: "/"               # default: nil (display on all pages)
 
 # Google Analytics Tracking (optional)
 # e.g, UA-1234567-89
-ga_tracking: UA-2709176-10
-ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true/nil by default)
+# ga_tracking: UA-2709176-10
+# ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true/nil by default)
 
 plugins:
   - jekyll-seo-tag
