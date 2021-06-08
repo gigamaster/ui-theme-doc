@@ -15,7 +15,7 @@ nav_order: 7
 
 ---
 
-Just the Docs uses [lunr.js](http://lunrjs.com) to add a client-side search interface powered by a JSON index that Jekyll generates.
+UI Theme Doc (Just the Docs) uses [lunr.js](http://lunrjs.com) to add a client-side search interface powered by a JSON index that Jekyll generates.
 All search results are shown in an auto-complete style interface (there is no search results page).
 By default, all generated HTML pages are indexed using the following data points:
 
@@ -115,7 +115,7 @@ search_exclude: true
 
 ## Generate search index when used as a gem
 
-If you use Just the Docs as a remote theme, you do not need the following steps.
+If you use UI Theme Doc (Just the Docs) as a remote theme, you do not need the following steps.
 
 If you use the theme as a gem, you must initialize the search by running this `rake` command that comes with `ui-theme-doc`:
 
@@ -125,3 +125,4 @@ $ bundle exec ui-theme-doc rake search:init
 
 This command creates the `assets/js/zzzz-search-data.json` file that Jekyll uses to create your search index.
 Alternatively, you can create the file manually with [this content]({{ site.github.repository_url }}/blob/master/assets/js/zzzz-search-data.json).
+

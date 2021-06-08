@@ -26,31 +26,31 @@ collections:
 just_the_docs:
   collections:
     tests:
-      name: Tests
+      name: Components
       nav_exclude: false
       nav_fold: true
       search_exclude: true
     components_header:
-      name: Test Collection 1
+      name: Header
       nav_exclude: false
       nav_fold: true
       search_exclude: true
     components_layout:
-      name: Test Collection 2
+      name: Layout
       nav_exclude: false
       nav_fold: true
       search_exclude: false
     components_main:
-      name: Test Collection 3
+      name: Main
       nav_exclude: false
       nav_fold: false
       search_exclude: true
     components_smarty:
-      name: Test Collection 4
+      name: Smarty
       nav_exclude: true
       search_exclude: false
     components_templates:
-      name: Test Collection 5
+      name: Templates
       nav_exclude: true
       search_exclude: true
 

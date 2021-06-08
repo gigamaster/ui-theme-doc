@@ -18,7 +18,7 @@ nav_order: 1
 
 ## Font stack
 
-By default, Just the Docs uses a native system font stack for sans-serif fonts:
+By default, UI Theme Doc (Just the Docs) uses a native system font stack for sans-serif fonts:
 
 ```scss
 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif
@@ -28,7 +28,7 @@ ABCDEFGHIJKLMNOPQRSTUVWXYZ
 abcdefghijklmnopqrstuvwxyz
 {: .fs-5 .ls-10 .code-example }
 
-For monospace type, like code snippets or the `<pre>` element, Just the Docs uses a native system font stack for monospace fonts:
+For monospace type, like code snippets or the `<pre>` element, UI Theme Doc (Just the Docs) uses a native system font stack for monospace fonts:
 
 ```scss
 "SFMono-Regular", Menlo, Consolas, Monospace
@@ -42,7 +42,7 @@ abcdefghijklmnopqrstuvwxyz
 
 ## Responsive type scale
 
-Just the Docs uses a responsive type scale that shifts depending on the viewport size.
+UI Theme Doc (Just the Docs) uses a responsive type scale that shifts depending on the viewport size.
 
 | Selector              | Small screen size `font-size`    | Large screen size `font-size` |
 |:----------------------|:---------------------------------|:------------------------------|
@@ -112,3 +112,4 @@ Text can be **bold**, _italic_, or ~~strikethrough~~.
 There are a number of specific typographic CSS classes that allow you to override default styling for font size, font weight, line height, and capitalization.
 
 [View typography utilities]({{ site.baseurl }}{% link docs/utilities/utilities.md %}#typography){: .btn .btn-outline }
+

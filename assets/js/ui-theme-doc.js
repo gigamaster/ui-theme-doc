@@ -1,9 +1,8 @@
 ---
 ---
 (function (jtd, undefined) {
-
+//  2.3.0
 // Event handling
-
 jtd.addEvent = function(el, type, handler) {
   if (el.attachEvent) el.attachEvent('on'+type, handler); else el.addEventListener(type, handler);
 }
@@ -69,12 +68,12 @@ function initNav() {
 
 function initSearch() {
   var request = new XMLHttpRequest();
-  request.open('GET', '{{ "assets/js/search-data.json" | relative_url }}', true);
+  request.open('GET', '{{ "assets/js/search-data.json" | absolute_url }}', true);
 
   request.onload = function(){
     if (request.status >= 200 && request.status < 400) {
       var docs = JSON.parse(request.responseText);
-
+      
       lunr.tokenizer.separator = {{ site.search.tokenizer_separator | default: site.search_tokenizer_separator | default: "/[\s\-/]+/" }}
 
       var index = lunr(function(){
@@ -120,14 +119,12 @@ function searchLoaded(index, docs) {
   var currentInput;
   var currentSearchIndex = 0;
 
-  var body = document.querySelector('body');
-
   function showSearch() {
-    body.classList.add('search-active');
+    document.documentElement.classList.add('search-active');
   }
 
   function hideSearch() {
-    body.classList.remove('search-active');
+    document.documentElement.classList.remove('search-active');
   }
 
   function update() {

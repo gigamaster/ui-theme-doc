@@ -8,7 +8,7 @@ nav_order: 2
 {: .no_toc }
 
 
-Just the Docs has some specific configuration parameters that can be defined in your Jekyll site's _config.yml file.
+UTD (Just the Docs) has some specific configuration parameters that can be defined in your Jekyll site's _config.yml file.
 {: .fs-6 .fw-300 }
 
 ## Table of contents
@@ -20,7 +20,7 @@ Just the Docs has some specific configuration parameters that can be defined in 
 ---
 
 
-View this site's [_config.yml](https://github.com/pmarsceill/ui-theme-doc/tree/master/_config.yml) file as an example.
+View this site's [_config.yml](https://github.com/gigamaster/ui-theme-doc/tree/master/_config.yml) file as an example.
 
 
 ## Site logo
@@ -67,8 +67,8 @@ search:
 ```yaml
 # Aux links for the upper right navigation
 aux_links:
-  "Just the Docs on GitHub":
-    - "//github.com/pmarsceill/ui-theme-doc"
+  "UI Theme Doc on GitHub":
+    - "//github.com/gigamaster/ui-theme-doc"
 
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: false
@@ -103,7 +103,7 @@ nav_next_prev: true
 # appears at the bottom of every page's main content
 # Note: The footer_content option is deprecated and will be removed in a future major release. Please use `_includes/footer_custom.html` for more robust
 markup / liquid-based content.
-footer_content: "Copyright &copy; 2017-2020 Patrick Marsceill. Distributed by an <a href=\"https://github.com/pmarsceill/ui-theme-doc/tree/master/LICENSE.txt\">MIT license.</a>"
+footer_content: "Copyright &copy; 2021 Distributed under the terms of the <a href=\"https://opensource.org/licenses/MIT\" target=\"_blank\">MIT license.</a>"
 
 # Footer last edited timestamp
 last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
@@ -112,7 +112,7 @@ last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https:/
 # Footer "Edit this page on GitHub" link text
 gh_edit_link: true # show or hide edit this page link
 gh_edit_link_text: "Edit this page on GitHub."
-gh_edit_repository: "https://github.com/pmarsceill/ui-theme-doc" # the github URL for your repo
+gh_edit_repository: "https://github.com/gigamaster/ui-theme-doc" # the github URL for your repo
 gh_edit_branch: "master" # the branch that your docs is served from
 # gh_edit_source: docs # the source that your files originate from
 gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
@@ -235,28 +235,28 @@ ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (t
 ## Document collections
 
 By default, the navigation and search include normal [pages](https://jekyllrb.com/docs/pages/).
-You can also use [Jekyll collections](https://jekyllrb.com/docs/collections/) which group documents semantically together.
+Instead, you can also use [Jekyll collections](https://jekyllrb.com/docs/collections/) which group documents semantically together.
 
-For example, put all your test files in the `_tests` folder and create the `tests` collection:
+For example, put all your documentation files in the `_docs` folder and create the `docs` collection:
 ```yaml
 # Define Jekyll collections
 collections:
-  # Define a collection named "tests", its documents reside in the "_tests" directory
-  tests:
+  # Define a collection named "docs", its documents reside in the "_docs" directory
+  docs:
     permalink: "/:collection/:path/"
     output: true
 
-just_the_docs:
+ui_theme_doc:
   # Define which collections are used in ui-theme-doc
   collections:
-    # Reference the "tests" collection
-    tests:
+    # Reference the "docs" collection
+    docs:
       # Give the collection a name
-      name: Tests
+      name: Documentation
       # Exclude the collection from the navigation
       # Supports true or false (default)
-      # nav_exclude: true
-      # Fold the collection in the navigation
+      nav_exclude: false
+      # Exclude the collection from the search
       # Supports true or false (default)
       # nav_fold: true
       # Exclude the collection from the search
@@ -269,17 +269,17 @@ You can reference multiple collections.
 This creates categories in the navigation with the configured names.
 ```yaml
 collections:
-  tests:
+  docs:
     permalink: "/:collection/:path/"
     output: true
   tutorials:
     permalink: "/:collection/:path/"
     output: true
 
-just_the_docs:
+ui_theme_doc:
   collections:
-    tests:
-      name: Tests
+    docs:
+      name: Documentation
     tutorials:
       name: Tutorials
 ```
@@ -290,10 +290,10 @@ The navigation for each collection is a separate name space for page titles: a p
 By default, the navigation panel always shows links to all the top-level pages in all collections.
 You can configure whether individual collections appear folded, e.g.:
 ```yaml
-just_the_docs:
+ui_theme_doc:
   collections:
     tests:
-      name: Tests
+      name: docs
       nav_fold: true
     tutorials:
       name: Tutorials
