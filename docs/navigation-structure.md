@@ -114,9 +114,6 @@ Sometimes you will want to create a page with many children (a section). First, 
 +-- ..
 ```
 
-On the parent pages, add this YAML front matter parameter:
--  `has_children: true` (tells us that this is a parent page)
-
 #### Example
 {: .no_toc }
 
@@ -125,16 +122,19 @@ On the parent pages, add this YAML front matter parameter:
 layout: default
 title: UI Components
 nav_order: 2
-has_children: true
 ---
 ```
 
-Here we're setting up the UI Components landing page that is available at `/docs/ui-components`, which has children and is ordered second in the main nav.
+Here we're setting up the UI Components landing page that is available at URL `/docs/ui-components`, which is ordered second in the main navigation.[^has-children]
+
+[^has-children]: *Note for users of previous versions of Just the Docs:* The `has_children` field is now redundant, and ignored.
+
+By default, the navigation links for all pages with children come with an expander. When you click the expander, the display of the children is toggled, so you can expand or collapse all the children displays, regardless of which page is currently active. 
 
 ### Child pages
 {: .text-gamma }
 
-On child pages, simply set the `parent:` YAML front matter to whatever the parent's page title is and set a nav order (this number is now scoped within the section).
+On child pages, simply set the `parent:` YAML front matter to the parent page's  title, and set a navigation order (relative to pages having the same parent).
 
 #### Example
 {: .no_toc }

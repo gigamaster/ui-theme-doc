@@ -7,31 +7,52 @@ collections:
   tests:
     permalink: "/:collection/:path:output_ext"
     output: true
-  test_collection_1:
+  components_header:
     permalink: "/:collection/:path:output_ext"
     output: true
-  test_collection_2:
+  components_layout:
+    permalink: "/:collection/:path:output_ext"
+    output: true
+  components_main:
+    permalink: "/:collection/:path:output_ext"
+    output: true
+  components_smarty:
+    permalink: "/:collection/:path:output_ext"
+    output: true
+  components_smarty:
     permalink: "/:collection/:path:output_ext"
     output: true
 
-ui_theme_doc:
+just_the_docs:
   collections:
     tests:
-      name: Tests
+      name: Components
       nav_exclude: false
       nav_fold: true
       search_exclude: true
-    test_collection_1:
-      name: Test Collection 1
+    components_header:
+      name: Header
       nav_exclude: false
       nav_fold: true
       search_exclude: true
-    test_collection_2:
-      name: Test Collection 2
+    components_layout:
+      name: Layout
       nav_exclude: false
       nav_fold: true
       search_exclude: false
-
+    components_main:
+      name: Main
+      nav_exclude: false
+      nav_fold: false
+      search_exclude: true
+    components_smarty:
+      name: Smarty
+      nav_exclude: true
+      search_exclude: false
+    components_templates:
+      name: Templates
+      nav_exclude: true
+      search_exclude: true
 
 defaults:
   -
