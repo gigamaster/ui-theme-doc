@@ -1,8 +1,8 @@
 #!/bin/sh
 
 echo "Packaging gem... \n"
-gem build ui-theme-doc.gemspec
+gem build just-the-docs.gemspec
 
 echo "Cleaning up... \n"
 git add *.gem
-git commit -m 'Bump ui-theme-doc gem package'
+git commit -m 'Bump just-the-docs gem package'

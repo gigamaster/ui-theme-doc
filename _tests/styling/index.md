@@ -1,5 +1,0 @@
----
-title: Styling
----
-
-# Styling

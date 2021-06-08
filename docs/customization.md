@@ -18,6 +18,9 @@ nav_order: 6
 ## Color schemes
 {: .d-inline-block }
 
+New
+{: .label .label-green }
+
 Just the Docs supports two color schemes: light (default), and dark.
 
 To enable a color scheme, set the `color_scheme` parameter in your site's `_config.yml` file:
@@ -29,7 +32,6 @@ To enable a color scheme, set the `color_scheme` parameter in your site's `_conf
 # Color scheme supports "light" (default) and "dark"
 color_scheme: dark
 ```
-{% unless site.toggle_color_scheme and site.toggle_color_scheme != "nil"  %}
 <button class="btn js-toggle-dark-mode">Preview dark color scheme</button>
 
 <script>
@@ -45,7 +47,6 @@ jtd.addEvent(toggleDarkMode, 'click', function(){
   }
 });
 </script>
-{% endunless %}
 
 ## Custom schemes
 
@@ -55,7 +56,7 @@ You can add custom schemes.
 If you want to add a scheme named `foo` (can be any name) just add a file `_sass/color_schemes/foo.scss` (replace `foo` by your scheme name) 
 where you override theme variables to change colors, fonts, spacing, etc.
 
-Available variables are listed in the [_variables.scss](https://github.com/pmarsceill/ui-theme-doc/tree/master/_sass/support/_variables.scss) file.
+Available variables are listed in the [_variables.scss](https://github.com/pmarsceill/just-the-docs/tree/master/_sass/support/_variables.scss) file.
 
 For example, to change the link color from the purple default to blue, include the following inside your scheme file:
 
@@ -78,13 +79,13 @@ color_scheme: foo
 
 ### Switchable custom scheme
 
-If you want to be able to change the scheme dynamically, for example via javascript, just add a file `assets/css/ui-theme-doc-foo.scss` (replace `foo` by your scheme name)
+If you want to be able to change the scheme dynamically, for example via javascript, just add a file `assets/css/just-the-docs-foo.scss` (replace `foo` by your scheme name)
 with the following content:`
 
 {% raw %}
     ---
     ---
-    {% include css/ui-theme-doc.scss.liquid color_scheme="foo" %}
+    {% include css/just-the-docs.scss.liquid color_scheme="foo" %}
 {% endraw %}
 
 This allows you to switch the scheme via the following javascript.
