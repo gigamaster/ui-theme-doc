@@ -32,6 +32,7 @@ To enable a color scheme, set the `color_scheme` parameter in your site's `_conf
 # Color scheme supports "light" (default) and "dark"
 color_scheme: dark
 ```
+{% unless site.toggle_color_scheme and site.toggle_color_scheme != "nil"  %}
 <button class="btn js-toggle-dark-mode">Preview dark color scheme</button>
 
 <script>
@@ -47,6 +48,7 @@ jtd.addEvent(toggleDarkMode, 'click', function(){
   }
 });
 </script>
+{% endunless %}
 
 ## Custom schemes
 

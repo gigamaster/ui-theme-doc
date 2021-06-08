@@ -22,7 +22,18 @@ nav_order: 5
 
 The main navigation for your UI Theme Doc (Just the Docs) site is on the left side of the page at large screens and on the top (behind a tap) on small screens. The main navigation can be structured to accommodate a multi-level menu system (pages with children and grandchildren).
 
-By default, all pages will appear as top level pages in the main nav unless a parent page is defined (see [Pages with Children](#pages-with-children)).
+By default, links to all pages appear in the main navigation at the top level, ordered alphabetically by page title. By adding fields to the YAML front matter of individual pages, you can [change their order](#ordering-pages), [exclude pages](#excluding-pages), and [display pages as children ](#pages-with-children) to any depth.
+
+Additional navigation features include [auxiliary links](#auxiliary-links) at the top of the page, and in-page navigation with an automatically-generated [table of contents](#in-page-navigation-with-table-of-contents).
+
+If your site has pages with the same title, you need to avoid confusion when you reference that title on other pages. For the construction of the navigation display to work (and to avoid potential confusion when browsing) your page titles need to satisfy the following requirements:
+
+* Top-level pages cannot have the same title.
+* Children of the same parent cannot have the same title.
+* A child cannot have the same title as its parent or any of its ancestors.
+
+You can disambiguate references to parent titles in [several ways](#title-disambiguation). If two potential parents have the same title, but different grandparents, you can use the grandparent titles to identify the intended parent. For deeper navigation structures, you can also use the titles of more remote ancestors. And if you want the same navigation structure in different parts of the website, you can add section identifiers (which are not displayed).
+
 
 ---
 
@@ -47,7 +58,7 @@ The parameter values can be numbers (integers, floats) and/or strings. When you 
 
 By default, all Capital letters come before all lowercase letters; you can add `nav_sort: case_insensitive` in the configuration file to ignore the case. Enclosing strings in quotation marks is optional.
 
-> *Note for users of previous versions:* `nav_sort: case_insensitive` previously affected the ordering of numerical `nav_order` parameters: e.g., `10` came before `2`. Also, all pages with explicit `nav_order` parameters previously came before all pages with default parameters. Both were potentially confusing, and they have now been eliminated. 
+[^case-insensitive]: *Note for users of previous versions:* `nav_sort: case_insensitive` previously affected the ordering of numerical `nav_order` parameters: e.g., `10` came before `2`. Also, all pages with explicit `nav_order` parameters previously came before all pages with default parameters. Both were potentially confusing, and they have now been eliminated. 
 
 ---
 
@@ -141,7 +152,7 @@ The Buttons page appears as a child of UI Components and appears second in the U
 
 ### Auto-generating Table of Contents
 
-By default, all pages with children will automatically append a Table of Contents which lists the child pages after the parent page's content. To disable this auto Table of Contents, set `has_toc: false` in the parent page's YAML front matter.
+By default, all parent pages will automatically have a Table of Contents at the bottom, listing their child pages. To disable this automatic Table of Contents, set `has_toc: false` in the parent page's YAML front matter.
 
 #### Example
 {: .no_toc }
@@ -159,10 +170,7 @@ has_toc: false
 ### Children with children
 {: .text-gamma }
 
-Child pages can also have children (grandchildren). This is achieved by using a similar pattern on the child and grandchild pages.
-
-1. Add the `has_children` attribute to the child
-1. Add the `parent` and `grand_parent` attribute to the grandchild
+Child pages can themselves have children, recursively, to any number of levels. 
 
 #### Example
 {: .no_toc }
@@ -173,7 +181,6 @@ layout: default
 title: Buttons
 parent: UI Components
 nav_order: 2
-has_children: true
 ---
 ```
 
@@ -182,7 +189,6 @@ has_children: true
 layout: default
 title: Buttons Child Page
 parent: Buttons
-grand_parent: UI Components
 nav_order: 1
 ---
 ```
@@ -205,9 +211,43 @@ This would create the following navigation structure:
 
 ---
 
+### Title disambiguation
+{: .text-gamma }
+
+If no two pages on your website have the same `title`, you only need to set the `parent` titles to fix the hierarchy. You can also have the same `title` on pages that have no children, provided that they have different parent pages.
+
+If two parents have the same `title`, but different grandparents, you can set their `grand_parent` titles to distinguish between their parents. The `grand_parent` title needs to be the same as the `parent` of the `parent`.
+
+
+#### Example
+{: .no_toc }
+
+```yaml
+---
+layout: default
+title: Buttons Child Page
+parent: Buttons
+grand_parent: UI Components
+nav_order: 1
+---
+```
+
+You can use the following techniques for disambiguating titles in deeper navigation structures (or simply instead of `grand_parent`): 
+
+Ancestors
+: The `ancestor` field of a page is similar to `grand_parent`: it refers to a page that can be reached by a succession  of `parent` titles.  
+
+Sections
+: You can choose a unique section identifier (a number or string), and add it as the `section_id` field of a page. Then use the same identifier for the `in_section` field of all its descendant pages. If you use a new `section_id` field inside a section, you create a sub-section.
+
+In contrast to `ancestor` values, section identifiers are independent of page titles. However, you need to be careful not to set the same `section_id` value more than once.
+
+---
+
 ## Auxiliary Links
 
 To add auxiliary links to your site (in the upper right on all pages), add it to the `aux_links` [configuration option]({{ site.baseurl }}{% link docs/configuration.md %}#aux-links) in your site's `_config.yml` file.
+
 
 #### Example
 {: .no_toc }

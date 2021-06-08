@@ -84,6 +84,18 @@ aux_links_new_tab: false
 heading_anchors: true
 ```
 
+## Parent and sibling links
+
+```yaml
+# Include links to parent and sibling pages when showing the automatic TOC
+nav_next_prev: true
+#
+# The default arrows can be changed to other characters or words
+# nav_prev_text: "&larr;"
+# nav_up_text:   "&uarr;"
+# nav_next_text: "&rarr;"
+```
+
 ## Footer content
 
 ```yaml
@@ -118,9 +130,10 @@ _note: `footer_content` is deprecated, but still supported. For a better experie
 ## Color scheme
 
 ```yaml
-# Color scheme supports "light" (default) and "dark"
+# Color scheme supports "dark", "light", and your custom schemes:
 color_scheme: dark
 ```
+{% unless site.toggle_color_scheme and site.toggle_color_scheme != "nil"  %}
 <button class="btn js-toggle-dark-mode">Preview dark color scheme</button>
 
 <script>
@@ -136,8 +149,79 @@ jtd.addEvent(toggleDarkMode, 'click', function(){
   }
 });
 </script>
-
+{% endunless %}
 See [Customization]({{ site.baseurl }}{% link docs/customization.md %}) for more information.
+
+## Toggle between two schemes
+
+New
+{: .label .label-green }
+
+```yaml
+# color_scheme: nil                # default: light
+# To add a button to switch all pages to a different scheme:
+toggle_color_scheme: dark          # default: nil (no toggle button)
+# To display the toggle button only on one page:
+toggle_page_url: "/"               # default: nil (display on all pages)
+# To toggle automatically when the system mode preference changes:
+toggle_auto_mode: true             # default: nil (manual toggle)
+# To set the button text for toggling and reverting:
+# toggle_text_1: "&rarr; &#x26ab;" # default: "&rarr; Dark Mode"
+# toggle_text_2: "&rarr; &#x26ab;" # default: "&rarr; Light Mode"
+```
+
+## Callouts
+
+To use this feature, you need to configure a `color` and (optionally) `title` for each kind of callout you want to use, e.g.:
+
+```yaml
+callouts:
+  warning:
+    title: Warning
+    color: red
+```
+
+This uses the color `$red-000` for the background of the callout, and `$red-300` for the title and box decoration.[^dark] You can then style a paragraph as a `warning` callout like this:
+
+```markdown
+{: .warning }
+A paragraph...
+```
+
+[^dark]:
+    If you use the `dark` color scheme, this callout uses `$red-300` for the background, and `$red-000` for the title. 
+
+The colors `grey-lt`, `grey-dk`, `purple`, `blue`, `green`, `yellow`, and `red` are predefined; to use a custom color, you need to define its `000` and `300` levels in your SCSS files. For example, to use `pink`, add the following to your `_sass/custom/custom.scss` file:
+
+```scss
+$pink-000: #f77ef1;
+$pink-100: #f967f1;
+$pink-200: #e94ee1;
+$pink-300: #dd2cd4;
+```
+
+You can override the default `opacity` of the background for a particular callout, e.g.:
+
+```yaml
+callouts:
+  custom:
+    color: pink
+    opacity: 0.3
+```
+
+You can change the default opacity (0.2) for all callouts, e.g.:
+
+```yaml
+callouts_opacity: 0.3
+```
+
+You can also adjust the overall level of callouts.
+The value of `callouts_level` is either `quiet` or `loud`;
+`loud` increases the saturation and lightness of the backgrounds.
+The default level is `quiet` when using the `light` or custom color schemes,
+and `loud` when using the `dark color scheme.`
+
+See [Callouts]({{ site.baseurl }}{% link docs/ui-components/callouts.md %}) for more information.
 
 ## Google Analytics
 
@@ -174,8 +258,12 @@ ui_theme_doc:
       nav_exclude: false
       # Exclude the collection from the search
       # Supports true or false (default)
-      search_exclude: false
+      # nav_fold: true
+      # Exclude the collection from the search
+      # Supports true or false (default)
+      # search_exclude: true
 ```
+The navigation for all your normal pages (if any) is displayed before those in collections.
 
 You can reference multiple collections.
 This creates categories in the navigation with the configured names.
@@ -188,10 +276,28 @@ collections:
     permalink: "/:collection/:path/"
     output: true
 
-just_the_docs:
+ui_theme_doc:
   collections:
     docs:
       name: Documentation
     tutorials:
       name: Tutorials
 ```
+When *all* your pages are in a single collection, its name is not displayed.
+
+The navigation for each collection is a separate name space for page titles: a page in one collection cannot be a child of a page in a different collection, or of a normal page.
+
+By default, the navigation panel always shows links to all the top-level pages in all collections.
+You can configure whether individual collections appear folded, e.g.:
+```yaml
+ui_theme_doc:
+  collections:
+    tests:
+      name: docs
+      nav_fold: true
+    tutorials:
+      name: Tutorials
+      nav_fold: false
+```
+Clicking the expander mark next to the name of a folded collection reveals the links to its top-level pages.
+Visiting any page in a folded collection reveals those links, and hides the links for all other folded collections.
