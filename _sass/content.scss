@@ -1,8 +1,8 @@
-@charset "UTF-8";
+// @charset "UTF-8";
 
 //
 // Styles for rendered markdown in the .main-content container
-// 2.3.0
+//
 // stylelint-disable selector-no-type, max-nesting-depth, selector-max-compound-selectors, selector-max-type
 
 .main-content {
@@ -21,7 +21,6 @@
   a {
     overflow: hidden;
     text-overflow: ellipsis;
-// white-space: nowrap;
   }
 
   ul,
@@ -59,7 +58,7 @@
       ol {
         counter-reset: sub-counter;
 
-        li {
+        > li {
           &::before {
             content: counter(sub-counter, lower-alpha);
             counter-increment: sub-counter;

@@ -95,4 +95,3 @@ Use the [margin utility classes]({{ site.baseurl }}{% link docs/utilities/layout
 [Button with more space](http://example.com/){: .btn .btn-green .mr-4 }
 [Button ](http://example.com/){: .btn .btn-blue }
 ```
-

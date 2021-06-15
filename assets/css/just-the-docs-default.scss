@@ -6,18 +6,17 @@
   {% assign color_scheme = "light" %}
 {% endif %}
 
-
 {% if site.toggle_color_scheme == "nil" or site.toggle_color_scheme == nil %}
 
   {% assign toggle_color_scheme = nil %}
 
-  {% include css/ui-theme-doc.scss.liquid color_scheme = color_scheme %}
+  {% include css/just-the-docs.scss.liquid color_scheme = color_scheme %}
 
 {% else %}
 
   {% assign toggle_color_scheme = site.toggle_color_scheme %}
 
-  {% include css/ui-theme-doc-toggle.scss.liquid color_scheme = color_scheme
+  {% include css/just-the-docs-toggle.scss.liquid color_scheme = color_scheme
                                     toggle_color_scheme = toggle_color_scheme %}
 
 {% endif %}

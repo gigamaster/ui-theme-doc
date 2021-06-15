@@ -20,7 +20,7 @@ nav_order: 5
 
 ## Main navigation
 
-The main navigation for your UI Theme Doc (Just the Docs) site is on the left side of the page at large screens and on the top (behind a tap) on small screens. The main navigation can be structured to accommodate a multi-level menu system (pages with children and grandchildren).
+The main navigation for your Just the Docs site is at the left side of the page on large screens, and at the top (behind a tap) on small screens. It can be structured to accommodate a multi-level menu of unlimited depth: pages can always have child pages.
 
 By default, links to all pages appear in the main navigation at the top level, ordered alphabetically by page title. By adding fields to the YAML front matter of individual pages, you can [change their order](#ordering-pages), [exclude pages](#excluding-pages), and [display pages as children ](#pages-with-children) to any depth.
 
@@ -56,15 +56,15 @@ The parameter values determine the order of the top-level pages, and of child pa
 
 The parameter values can be numbers (integers, floats) and/or strings. When you omit `nav_order` parameters, they default to the titles of the pages, which are ordered alphabetically. Pages with numerical `nav_order` parameters always come before those with strings or default `nav_order` parameters. If you want to make the page order independent of the page titles, you can set explicit `nav_order` parameters on all pages.
 
-By default, all Capital letters come before all lowercase letters; you can add `nav_sort: case_insensitive` in the configuration file to ignore the case. Enclosing strings in quotation marks is optional.
+By default, all Capital letters come before all lowercase letters; you can add `nav_sort: case_insensitive` in the configuration file to ignore the case.[^case-insensitive] Enclosing strings in quotation marks is optional.
 
-[^case-insensitive]: *Note for users of previous versions:* `nav_sort: case_insensitive` previously affected the ordering of numerical `nav_order` parameters: e.g., `10` came before `2`. Also, all pages with explicit `nav_order` parameters previously came before all pages with default parameters. Both were potentially confusing, and they have now been eliminated. 
+[^case-insensitive]: *Note for users of previous versions of Just the Docs:* The option `nav_sort: case_insensitive` previously affected the ordering of numerical `nav_order` parameters: e.g., `10` came before `2`. Also, all pages with explicit `nav_order` parameters previously came before all pages with default parameters. Both were potentially confusing, and they have now been eliminated. 
 
 ---
 
 ## Excluding pages
 
-For specific pages that you do not wish to include in the main navigation, e.g. a 404 page or a landing page, use the `nav_exclude: true` parameter in the YAML front matter for that page.
+For specific pages that you do not wish to include in the main navigation (e.g., a 404 page or a landing page) set `nav_exclude: true` in the YAML front matter.
 
 #### Example
 {: .no_toc }
@@ -85,7 +85,7 @@ Pages with no `title` are automatically excluded from the navigation.
 
 ## Pages with children
 
-Sometimes you will want to create a page with many children (a section). First, it is recommended that you keep pages that are related in a directory together... For example, in these docs, we keep all of the written documentation in the `./docs` directory and each of the sections in subdirectories like `./docs/ui-components` and `./docs/utilities`. This gives us an organization like:
+Sometimes you will want to create a page with many children. First, it is recommended that you store related pages together in a directory. For example, in these docs, we keep all of the written documentation pages in the `./docs` directory, and each of the sections in subdirectories like `./docs/ui-components` and `./docs/utilities`. This gives us an organization like this:
 
 ```
 +-- ..
@@ -148,7 +148,7 @@ nav_order: 2
 ---
 ```
 
-The Buttons page appears as a child of UI Components and appears second in the UI Components section.
+The Buttons page appears as a child of UI Components and appears second in the UI Components pages.
 
 ### Auto-generating Table of Contents
 
@@ -209,8 +209,6 @@ This would create the following navigation structure:
 +-- ..
 ```
 
----
-
 ### Title disambiguation
 {: .text-gamma }
 
@@ -248,15 +246,14 @@ In contrast to `ancestor` values, section identifiers are independent of page ti
 
 To add auxiliary links to your site (in the upper right on all pages), add it to the `aux_links` [configuration option]({{ site.baseurl }}{% link docs/configuration.md %}#aux-links) in your site's `_config.yml` file.
 
-
 #### Example
 {: .no_toc }
 
 ```yaml
 # Aux links for the upper right navigation
 aux_links:
-  "UI Theme Doc on GitHub":
-    - "//github.com/gigamaster/ui-theme-doc"
+  "Just the Docs on GitHub":
+    - "//github.com/pmarsceill/just-the-docs"
 ```
 
 ---
@@ -283,7 +280,7 @@ This example skips the page name heading (`#`) from the TOC, as well as the head
 
 ### Collapsible Table of Contents
 
-The Table of Contents can be made collapsible using the `<details>` and `<summary>` elements , as in the following example. The attribute `open` (expands the Table of Contents by default) and the styling with `{: .text-delta }` are optional.
+The Table of Contents can be made collapsible using the `<details>` and `<summary>` elements , as in the following example. The attribute `open` (to expand the Table of Contents by default) and the styling with `{: .text-delta }` are optional.
 
 ```markdown
 <details open markdown="block">
@@ -296,5 +293,4 @@ The Table of Contents can be made collapsible using the `<details>` and `<summar
 </details>
 ```
 
-The result is shown at [the top of this page](#navigation-structure) (`{:toc}` can be used only once on each page).
-
+The result is shown at [the top of this page](#navigation-structure). Note that Kramdown expands `{:toc}` only once on each page.

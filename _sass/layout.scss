@@ -1,6 +1,6 @@
 //
 // The basic two column layout
-// 2.3.0
+//
 
 .side-bar {
   z-index: 0;
@@ -165,6 +165,12 @@
     rgba($feedback-color, 1) 0%,
     rgba($feedback-color, 0.8) 100%
   );
+}
+
+.theme-toggle {
+  position: absolute;
+  top: $header-height;
+  top-margin: $sp-3;
 }
 
 // stylelint-disable selector-max-type

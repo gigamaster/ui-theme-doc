@@ -86,4 +86,3 @@ To demonstrate front end code, sometimes it's useful to show a rendered example 
 [Link button](http://example.com/){: .btn }
 ```
 {% endhighlight %}
-
