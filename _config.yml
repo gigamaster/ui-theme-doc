@@ -275,7 +275,7 @@ callouts:
   custom:
     title: Custom
     color: pink
-    opacity: 0.3
+    opacity: 0.4
   danger:
     title: Danger
     color: red

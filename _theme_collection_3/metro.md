@@ -4,7 +4,7 @@ title: Metro
 parent: CSS Frameworks
 ---
 
-# Child Theme
+# Metro
 
 This is a child page in Theme Collection 3.
 

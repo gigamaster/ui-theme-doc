@@ -4,7 +4,7 @@ title: Bootstrap
 parent: CSS Frameworks
 ---
 
-# Child Theme
+# Bootstrap
 
 This is a child page in Theme Collection 3.
 

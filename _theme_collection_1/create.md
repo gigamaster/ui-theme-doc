@@ -5,7 +5,7 @@ nav_order: "30"
 parent: Renderer
 ---
 
-# Child Theme
+# Create a Theme
 
 This is a child page in Theme Collection 1.
 

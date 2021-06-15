@@ -4,7 +4,7 @@ title: Renderer
 has_children: true
 ---
 
-# Parent Theme
+# Renderer
 
 This is a top-level page in Theme Collection 1.
 

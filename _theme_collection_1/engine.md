@@ -5,7 +5,7 @@ nav_order: "10"
 parent: Renderer
 ---
 
-# Child Theme
+# Smarty Template Engine
 
 This is a child page in Theme Collection 1.
 

@@ -1,10 +1,10 @@
 ---
 layout: default
 title: Theme Components
-has_children: false
+has_children: true
 ---
 
-# No Search or Navigation Theme
+# Theme Components
 
 This is the only top-level page in Theme Collection 5.  
 

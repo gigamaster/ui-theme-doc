@@ -5,7 +5,7 @@ nav_order: "20"
 parent: Renderer
 ---
 
-# Child Theme
+# Theme Management
 
 This is a child page in Theme Collection 1.
 

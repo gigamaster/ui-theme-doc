@@ -4,7 +4,7 @@ title: Overview
 has_children: true
 ---
 
-# Parent Theme
+# Overview
 
 This is a top-level page in Theme Collection 2.
 

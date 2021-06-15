@@ -5,7 +5,7 @@ nav_order: "10"
 parent: Theme Layout
 ---
 
-# Child Theme
+# Layout
 
 This is a child page in Theme Collection 2.
 

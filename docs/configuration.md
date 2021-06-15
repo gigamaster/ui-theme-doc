@@ -20,14 +20,14 @@ Just the Docs has some specific configuration parameters that can be defined in 
 ---
 
 
-View this site's [_config.yml](https://github.com/pmarsceill/just-the-docs/tree/master/_config.yml) file as an example.
+View this site's [_config.yml](https://github.com/gigamaster/ui-theme-doc/blob/main/_config.yml) file as an example.
 
 
 ## Site logo
 
 ```yaml
 # Set a path/url to a logo that will be displayed instead of the title
-logo: "/assets/images/just-the-docs.png"
+logo: "/assets/images/ui-theme-doc.png"
 ```
 
 ## Search
@@ -67,8 +67,8 @@ search:
 ```yaml
 # Aux links for the upper right navigation
 aux_links:
-  "Just the Docs on GitHub":
-    - "//github.com/pmarsceill/just-the-docs"
+  "UTD on GitHub":
+    - "//github.com/gigamaster/ui-theme-doc"
 
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: false
@@ -103,7 +103,8 @@ nav_next_prev: true
 # appears at the bottom of every page's main content
 # Note: The footer_content option is deprecated and will be removed in a future major release. Please use `_includes/footer_custom.html` for more robust
 markup / liquid-based content.
-footer_content: "Copyright &copy; 2017-2020 Patrick Marsceill. Distributed by an <a href=\"https://github.com/pmarsceill/just-the-docs/tree/master/LICENSE.txt\">MIT license.</a>"
+footer_content: "Copyright &copy; 2021 <a href=\"https://github.com/xoopscube\" target=\"_blank\">The XOOPSCube Project</a>. 
+Distributed under the terms of the MIT license."
 
 # Footer last edited timestamp
 last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
@@ -112,10 +113,10 @@ last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https:/
 # Footer "Edit this page on GitHub" link text
 gh_edit_link: true # show or hide edit this page link
 gh_edit_link_text: "Edit this page on GitHub."
-gh_edit_repository: "https://github.com/pmarsceill/just-the-docs" # the github URL for your repo
+gh_edit_repository: "https://github.com/gigamaster/ui-theme-doc" # the github URL for your repo
 gh_edit_branch: "master" # the branch that your docs is served from
 # gh_edit_source: docs # the source that your files originate from
-gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
+gh_edit_view_mode: "edit" # "tree" or "edit" if you want the user to jump into the editor immediately
 ```
 
 _note: `footer_content` is deprecated, but still supported. For a better experience we have moved this into an include called `_includes/footer_custom.html` which will allow for robust markup / liquid-based content._
@@ -228,7 +229,7 @@ See [Callouts]({{ site.baseurl }}{% link docs/ui-components/callouts.md %}) for 
 ```yaml
 # Google Analytics Tracking (optional)
 # e.g, UA-1234567-89
-ga_tracking: UA-5555555-55
+# ga_tracking: UA-5555555-55
 ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true by default)
 ```
 

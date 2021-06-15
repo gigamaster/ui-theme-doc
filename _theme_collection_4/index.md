@@ -1,10 +1,10 @@
 ---
 layout: default
 title: Theme UI
-has_children: false
+has_children: true
 ---
 
-# No Navigation Theme
+# Theme UI
 
 This is the only top-level page in Theme Collection 4.
 
