@@ -218,7 +218,7 @@ collections:
     permalink: "/:collection/:path:output_ext"
     output: true
 
-ui_theme_doc:
+just_the_docs:
   collections:
     themes:
       name: Themes
