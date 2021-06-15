@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Parent Test
+title: Parent Theme
 has_children: true
 ---
 
-# Parent Test
+# Parent Theme
 
-This is a top-level page in Test Collection 2.
+This is a top-level page in Theme Collection 2.
 
 The link below should lead to a page in the same collection.
 

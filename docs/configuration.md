@@ -237,22 +237,22 @@ ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (t
 By default, the navigation and search include normal [pages](https://jekyllrb.com/docs/pages/).
 You can also use [Jekyll collections](https://jekyllrb.com/docs/collections/) which group documents semantically together.
 
-For example, put all your test files in the `_tests` folder and create the `tests` collection:
+For example, put all your Theme files in the `_themes` folder and create the `themes` collection:
 ```yaml
 # Define Jekyll collections
 collections:
-  # Define a collection named "tests", its documents reside in the "_tests" directory
-  tests:
+  # Define a collection named "themes", its documents reside in the "_themes" directory
+  themes:
     permalink: "/:collection/:path/"
     output: true
 
 just_the_docs:
   # Define which collections are used in just-the-docs
   collections:
-    # Reference the "tests" collection
-    tests:
+    # Reference the "themes" collection
+    themes:
       # Give the collection a name
-      name: Tests
+      name: Themes
       # Exclude the collection from the navigation
       # Supports true or false (default)
       # nav_exclude: true
@@ -269,7 +269,7 @@ You can reference multiple collections.
 This creates categories in the navigation with the configured names.
 ```yaml
 collections:
-  tests:
+  themes:
     permalink: "/:collection/:path/"
     output: true
   tutorials:
@@ -278,8 +278,8 @@ collections:
 
 just_the_docs:
   collections:
-    tests:
-      name: Tests
+    themes:
+      name: Themes
     tutorials:
       name: Tutorials
 ```
@@ -292,8 +292,8 @@ You can configure whether individual collections appear folded, e.g.:
 ```yaml
 just_the_docs:
   collections:
-    tests:
-      name: Tests
+    themes:
+      name: Themes
       nav_fold: true
     tutorials:
       name: Tutorials

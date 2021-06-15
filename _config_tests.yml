@@ -1,56 +1,56 @@
-# Regression tests
-# To include the pages in /_tests in the local build, run jekyll with the option
-# --config _config.yml,_config_dev.yml,_tests.yml
+# Regression themes
+# To include the pages in /_themes in the local build, run jekyll with the option
+# --config _config.yml,_config_dev.yml,_themes.yml
 
 # Define Jekyll collections
 collections:
-  tests:
+  themes:
     permalink: "/:collection/:path:output_ext"
     output: true
-  test_collection_1:
+  theme_collection_1:
     permalink: "/:collection/:path:output_ext"
     output: true
-  test_collection_2:
+  theme_collection_2:
     permalink: "/:collection/:path:output_ext"
     output: true
-  test_collection_3:
+  theme_collection_3:
     permalink: "/:collection/:path:output_ext"
     output: true
-  test_collection_4:
+  theme_collection_4:
     permalink: "/:collection/:path:output_ext"
     output: true
-  test_collection_4:
+  theme_collection_4:
     permalink: "/:collection/:path:output_ext"
     output: true
 
-just_the_docs:
+ui_theme_doc:
   collections:
-    tests:
-      name: Tests
+    themes:
+      name: Themes
       nav_exclude: false
       nav_fold: true
       search_exclude: true
-    test_collection_1:
-      name: Test Collection 1
+    theme_collection_1:
+      name: Theme Default
       nav_exclude: false
       nav_fold: true
       search_exclude: true
-    test_collection_2:
-      name: Test Collection 2
+    theme_collection_2:
+      name: Theme Layout
       nav_exclude: false
       nav_fold: true
       search_exclude: false
-    test_collection_3:
-      name: Test Collection 3
+    theme_collection_3:
+      name: Theme Framework
       nav_exclude: false
       nav_fold: false
       search_exclude: true
-    test_collection_4:
-      name: Test Collection 4
+    theme_collection_4:
+      name: Theme UI
       nav_exclude: true
       search_exclude: false
-    test_collection_5:
-      name: Test Collection 5
+    theme_collection_5:
+      name: Theme Components
       nav_exclude: true
       search_exclude: true
 
@@ -58,7 +58,7 @@ defaults:
   -
     scope:
       path: "" # an empty string here means all files in the project
-      type: "tests"
+      type: "theme"
     values:
       layout: "default"
 

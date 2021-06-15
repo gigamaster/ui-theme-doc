@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Child Test
-parent: Parent Test
+title: Child Theme
+parent: Parent Theme
 ---
 
-# Child Test
+# Child Theme
 
-This is a child page in Test Collection 2.
+This is a child page in Theme Collection 1.
 
 The breadcrumb link above should lead to a page in the same collection.
