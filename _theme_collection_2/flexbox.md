@@ -5,7 +5,7 @@ nav_order: "20"
 parent: Theme Layout
 ---
 
-# Child Theme
+# Flexbox
 
 This is a child page in Theme Collection 1.
 
