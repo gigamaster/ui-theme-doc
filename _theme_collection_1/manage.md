@@ -1,14 +1,15 @@
 ---
 layout: default
-title: Blocks
-parent: Theme Default
+title: Theme Management
+nav_order: "20"
+parent: Renderer
 ---
 
 # Child Theme
 
 This is a child page in Theme Collection 1.
 
-Theme Default.
+Theme Management.
 
 - Blocks
   - Block-left

@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Overview
+title: Layout
+nav_order: "10"
 parent: Theme Layout
 ---
 

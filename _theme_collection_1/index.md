@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Theme Default
+title: Renderer
 has_children: true
 ---
 
@@ -8,7 +8,7 @@ has_children: true
 
 This is a top-level page in Theme Collection 1.
 
-This documentation is about Theme default.
+This documentation is about the module Renderer and Smarty Template Engine.
 
 The link below should lead to a page in the same collection.
 

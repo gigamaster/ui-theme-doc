@@ -1,15 +1,15 @@
 ---
 layout: default
-title: Flexbox
-nav_order: "20"
-parent: Theme Layout
+title: Smarty Template Engine
+nav_order: "10"
+parent: Renderer
 ---
 
 # Child Theme
 
 This is a child page in Theme Collection 1.
 
-Flexbox.  
+Smarty Template Engine.  
 
 
 The breadcrumb link above should lead to a page in the same collection.
