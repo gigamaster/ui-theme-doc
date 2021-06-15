@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Parent Theme
+title: Theme Layout
 has_children: true
 ---
 
