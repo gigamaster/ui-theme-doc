@@ -1,10 +1,9 @@
 ---
 layout: default
-title: Animation
-nav_order: "30"
+title: Tab
 parent: Theme Components
 ---
 
-# Animation
+# Tab
 
 Description

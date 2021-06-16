@@ -1,10 +1,9 @@
 ---
 layout: default
-title: Accordion
-nav_order: "20"
+title: Comment
 parent: Theme Components
 ---
 
-# Accordion
+# Comment
 
 Description

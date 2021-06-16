@@ -131,7 +131,7 @@ toggle_page_url: "/"               # default: nil (display on all pages)
 # 
 # callouts:
 #   admonition:
-#     # title:
+#     title: Admonition
 #     color: grey-lt
 #   attention:
 #     title: Attention
@@ -264,7 +264,7 @@ defaults:
 
 callouts:
   admonition:
-    # title:
+    title: Admonition
     color: grey-lt
   attention:
     title: Attention

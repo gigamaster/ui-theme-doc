@@ -69,7 +69,7 @@ defaults:
 
 callouts:
   admonition:
-    # title:
+    title: Admonition
     color: grey-lt
   attention:
     title: Attention
