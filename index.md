@@ -33,7 +33,10 @@ Set up Theme HTML5 locally so that you can easily make changes in your developme
 
 ### Renderer : Theme mangagement
 
-- See configuration options
+- Renderer options
+- Theme Installation
+- X-Update Theme Store
+-  
 ---
 
 ## About UI Theme Doc
