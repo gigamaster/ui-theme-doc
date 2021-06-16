@@ -61,7 +61,7 @@ aux_links:
     - "//github.com/gigamaster/ui-theme-doc"
 
 # Makes Aux links open in a new tab. Default is false
-aux_links_new_tab: false
+aux_links_new_tab: true
 
 # Sort order for navigation links
 # nav_sort: case_insensitive # default, equivalent to nil
@@ -217,7 +217,13 @@ collections:
   theme_collection_4:
     permalink: "/:collection/:path:output_ext"
     output: true
-
+  theme_collection_5:
+    permalink: "/:collection/:path:output_ext"
+    output: true
+  theme_collection_5:
+    permalink: "/:collection/:path:output_ext"
+    output: true
+    
 just_the_docs:
   collections:
     themes:
