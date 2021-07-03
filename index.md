@@ -6,7 +6,7 @@ description: "UI Theme Doc with built-in search that is easily customizable and 
 permalink: /
 ---
 
-# Focus on writing good documentation
+# XCL Web Application Platform Themes Documentation
 {: .fs-9 }
 
 UI Theme Doc -  provides information about how to install, create and manage themes and templates on XCL Web Application Platform.
@@ -27,7 +27,7 @@ Smarty Template engine allows dynamic content to be inserted into a HTML templat
 1. Theme Default 
   
   
-### Local installation: HTML5-based theme
+### Theme installation: HTML5-based theme
 
 Set up Theme HTML5 locally so that you can easily make changes in your development environment.
 
