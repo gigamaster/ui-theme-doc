@@ -23,12 +23,97 @@ Just the Docs has some specific configuration parameters that can be defined in 
 View this site's [_config.yml](https://github.com/gigamaster/ui-theme-doc/blob/main/_config.yml) file as an example.
 
 
-## Site logo
+## Template Management
 
-```yaml
-# Set a path/url to a logo that will be displayed instead of the title
-logo: "/assets/images/ui-theme-doc.png"
-```
+Customize your site by modifying the modules templates.  
+First make a copy (clone) of the default template set,  
+and then modify the templates in this new set. 
+
+- Active
+- Clone
+- Download
+- Delete (not available for default set)  
+- Edit (not available for default set)  
+
+{: .highlight }
+To name a template set you must use only a-z, 0-9 and/or under-score (_).
+
+- Name of new Template Set
+- Description
+- Credits
+
+
+## Template File Management
+
+- Search templates
+- Filter by "Template set" and module
+- Download
+- Delete
+- Edit
+- Upload file (html)  
+
+Exemple :
+
+| Template     | Option            |
+|:-------------|:------------------|
+| Template set | custom_name_set   |
+| Module       | good and plenty   |
+| File name    | user_userinfo.html|
+| Description  | Displays user info|
+| Source       | code HTML/Smarty  |
+
+
+## Banner Management
+
+- List of Banners
+- List of Bannerclients
+  - Name
+  - Contact
+  - Email
+  - Login
+  - Password
+  - Extra info 
+- List of Expired Banners
+
+Add a new Bannerclient
+- cid
+- Imp. Allowed (A feature that limits the number of times to Display a client banner).
+- Image URL
+- Click URL
+- HTML code
+- Is HTML
+
+## htaccess setting
+
+If your server can handle apache mod_rewrite, you may use the below .htaccess setting for cool uri. 
+
+{: .note }
+If you use this option, you have to turn on COOL URI config at legacy preference setting.
+
+## Preferences
+
+- Meta Keywords
+- Meta Description
+- Meta Robots
+- Meta Rating
+- Meta Author
+- Meta Copyright
+- Bing meta tag
+- Webmaster Google
+- Webmaster Yandex
+- Facebook App
+- Twitter site user
+- Pagetitle Format
+- Footer
+- jQuery UI CSS file URL
+- jQuery Core Library
+- jQuery UI Library
+- RSS Feed URL
+- Activate banner ads?
+
+## Help
+
+Available from Administration Dashboard
 
 ## Search
 
